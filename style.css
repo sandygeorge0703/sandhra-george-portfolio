@@ -1,0 +1,95 @@
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+.work-sans-bold {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.work-sans-light {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Change text color for all text within the navbar */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+  color: white; /* Replace with your desired color */
+}
+
+/* Optional: Change color of dropdown items if needed
+.navbar-dark .dropdown-menu .dropdown-item {
+  color: #f8f9fa; /* Replace with your desired color
+}
+
+Optional: Change color of active link
+.navbar-dark .nav-link.active {
+  color: #f8f9fa; } Replace with your desired color */
+
+.feature-icon {
+  background-color: white; /* Removes the blue background */
+  border-radius: 0; /* Optional: Makes the background circular if needed */
+
+}
