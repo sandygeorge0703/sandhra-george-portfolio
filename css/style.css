@@ -91,7 +91,6 @@ Optional: Change color of active link
 .feature-icon {
   background-color: white; /* Removes the blue background */
   border-radius: 0; /* Optional: Makes the background circular if needed */
-
 }
 
 /* Add this to your CSS file */
@@ -99,4 +98,3 @@ ul {
   list-style-type: disc; /* This ensures bullets are shown */
   margin-left: 1.5em; /* Adds indentation for the list */
 }
-
