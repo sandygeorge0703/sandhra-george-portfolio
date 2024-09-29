@@ -1,80 +1,210 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Fonts */
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
-  font-family: 'Work Sans', sans-serif; /* Default font for the body */
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 20px;
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #4bb8df;
-  color: white;
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-style: italic;
 }
 
-header h1 {
-  margin-bottom: 10px;
+/* Work Sans font */
+.work-sans-bold {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.contact-info {
-  margin-top: 10px;
+.work-sans-light {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-.contact-info a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
+/* Navbar and Layout */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure items are vertically centered */
+  flex-direction: column; /* Stack items vertically for mobile view */
 }
 
-h2 {
-  margin-top: 20px;
-  border-bottom: 2px solid #4bb8df;
-  padding-bottom: 5px;
+.container-fluid {
+  display: flex;
+  justify-content: center; /* Ensure centering even when collapsed */
+  align-items: center;
+  flex-direction: column; /* Stack elements for mobile/collapsed view */
+  text-align: center; /* Center all text within container */
 }
 
-h3 {
-  margin-top: 15px;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
-h4 {
-  margin: 5px 0;
+.navbar-toggler {
+  margin-left: auto;
 }
 
-.edu-entry, .exp-entry {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack items when collapsed */
 }
 
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.nav-item {
+  margin: 10px 0; /* Space around nav items when collapsed */
+}
+
+/* Change text color for all text within the navbar */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+  color: white; /* Replace with your desired color */
+}
+
+/* Optional: Change color of dropdown items */
+.navbar-dark .dropdown-menu .dropdown-item {
+  color: #f8f9fa; /* Replace with your desired color */
+}
+
+.navbar-dark .nav-link.active {
+  color: #f8f9fa; /* Replace with your desired color */
+}
+
+/* Feature Icon */
+.feature-icon {
+  background-color: white; /* Removes the blue background */
+  border-radius: 0; /* Optional: Makes the background circular if needed */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Ensure full width */
+}
+
+/* Lists */
 ul {
-  list-style-type: square;
-  margin-left: 20px;
+  list-style-type: disc; /* This ensures bullets are shown */
+  margin-left: 1.5em; /* Adds indentation for the list */
 }
 
+/* Global Centering for Images and Text */
+img {
+  display: block;
+  margin: 0 auto; /* Center all images */
+  max-width: 100%; /* Ensure responsiveness */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  text-align: center; /* Center all text, headings, and lists */
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-  body {
-      padding: 10px;
+  .navbar,
+  .navbar-collapse,
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically for smaller screens */
   }
 
-  header h1 {
-      font-size: 24px;
+  .nav-item {
+    margin: 5px 0; /* Reduce margin for nav items when collapsed */
   }
 
-  .contact-info {
-      font-size: 14px;
+  .container-fluid {
+    flex-direction: column; /* Stack elements for mobile/collapsed view */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  h1 {
+    font-size: 2.2em; /* Slightly reduce size for small screens */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Slightly reduce size for small screens */
+  }
+
+  h3 {
+    font-size: 1.5em; /* Adjust h3 size for small screens */
+  }
+
+  h4 {
+    font-size: 1.3em; /* Adjust h4 size for small screens */
+  }
+
+  h5 {
+    font-size: 1.2em; /* Adjust h5 size for small screens */
   }
 }
 
-/* All headings and paragraph styles are now set to Work Sans */
-h1, h2, h3, h4, p, blockquote {
-  font-family: 'Work Sans', sans-serif; /* Use Work Sans for headings, paragraphs, and blockquotes */
+@media (min-width: 769px) {
+  .navbar,
+  .navbar-collapse,
+  .navbar-nav {
+    flex-direction: row; /* Switch to horizontal alignment for larger screens */
+  }
+
+  .nav-item {
+    margin: 10px; /* Maintain spacing for larger screens */
+  }
+
+  .container-fluid {
+    flex-direction: row; /* Revert to row layout for larger screens */
+    text-align: left; /* Align text to the left on larger screens */
+  }
+}
+
+/* Optional Background Color */
+#contact,
+#about-me,
+#social-media {
+  background-color: #e1ffff; /* Light background */
+  position: relative;
+}
+
+footer {
+  padding: 20px 0; /* Extra padding for a more spacious footer */
+}
+
+footer h5 {
+  margin-bottom: 1rem; /* Space below headings for clarity */
+}
+
+footer a {
+  transition: color 0.3s; /* Smooth color transition for hover effects */
+  margin-bottom: 10px; /* Add space between each link */
+}
+
+footer a:hover {
+  color: #00bfff; /* Change link color on hover */
 }
